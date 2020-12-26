@@ -24,8 +24,7 @@ require_once 'header.php';
             <input type="text" class="form-control" id="standard" placeholder="Year/Standard" style="width:90%;border-radius:20px;">
         </div>
         <div style="text-align:center;">
-            <button type="submit" class="btn justify-content-center" style="margin-top:25px;width:40%;border-radius: 20px;background: rgb(242,108,65);
-background: linear-gradient(90deg, rgba(242,108,65,1) 19%, rgba(232,224,98,1) 100%);">Submit</button>
+            <button type="submit" class="btn justify-content-center" style="margin-top:25px;width:40%;border-radius: 20px;background: #F6872B;">Submit</button>
         </div>
         
     </form>
