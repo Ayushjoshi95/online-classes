@@ -1,0 +1,25 @@
+body{
+
+    background: url(../img/registration.png) no-repeat;
+}
+
+#registration_form{
+
+    background-color:white;
+    height:450px;
+    width:45%;
+    margin-left:28%;
+    margin-top:110px;
+    border-radius:20px;
+    box-shadow: 10px 23px 17px -9px rgba(170,163,163,0.75);
+    -webkit-box-shadow: 10px 23px 17px -9px rgba(170,163,163,0.75);
+    -moz-box-shadow: 10px 23px 17px -9px rgba(170,163,163,0.75);
+}
+
+
+@media only screen and (max-width: 780px) {
+    #registration_form{
+        width: 90%;
+        margin-left: 5%;
+    }
+  }

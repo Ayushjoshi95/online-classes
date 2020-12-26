@@ -2,7 +2,7 @@
 require_once 'header.php';
 ?>
 
-
+</header>
 
 <section class="home-banner-area">
 <div class="container">

@@ -44,7 +44,7 @@
 <ul class="navbar-nav">
 <li><a href="index.php">Home</a></li>
 <li><a href="about.php">About</a></li>
-<!-- <li><a href="courses.html">Courses</a></li> -->
+<li><a href="registration.php">Register</a></li>
 
 <!-- <li><a href="contacts.html">Contacts</a></li>
 <li>
@@ -65,4 +65,3 @@
 </form>
 </div>
 </div> -->
-</header>
