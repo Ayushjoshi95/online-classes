@@ -10,65 +10,65 @@
         {
             $id=test_input($_POST['delete']);
             
-            $sql="delete from users where id=$id";
+            $sql="delete from courses where id=$id";
             if($conn->query($sql))
             {
-                $resUsers=true;   
+                $resCourses=true;   
             }
             else
             {
-                $resUsers=$conn->error;
+                $resCourses=$conn->error;
             }
         }
         
         if(isset($_POST['add']))
         {
             $name=test_input($_POST['name']);
-            $college=test_input($_POST['college']);
-            $mob=test_input($_POST['mob']);
-            $email=test_input($_POST['email']);
-            $year=test_input($_POST['year']);
+            $feature_image=test_input($_POST['feature_image']);
+            $des=test_input($_POST['des']);
+            $price=test_input($_POST['price']);
+            $duration=test_input($_POST['duration']);
             
-            $sql="insert into users(email,name,contact,college,year) values('$email','$name','$mob','$college','$year')";
+            $sql="insert into courses(name,feature_image,des,price,duration) values('$name','$feature_image','$des','$price','$duration')";
 
             if($conn->query($sql))
             {
-                    $resUsers = "true";
+                    $resCourses = "true";
             }
             else
             {
-                $errorUsers=$conn->error;
+                $errorCourses=$conn->error;
             }
         }
         
         if(isset($_POST['edit']))
         {
             $name=test_input($_POST['ename']);
-            $college=test_input($_POST['ecollege']);
-            $mob=test_input($_POST['emob']);
-            $email=test_input($_POST['eemail']);
-            $year=test_input($_POST['eyear']);
+            $feature_image=test_input($_POST['efeature_image']);
+            $des=test_input($_POST['edes']);
+            $price=test_input($_POST['eprice']);
+            $duration=test_input($_POST['eduration']);
             $id=test_input($_POST['eid']);
             
-            $sql="update users set email='$email',college='$college',year='$year',name='$name',contact='$mob' where id=$id";
+            $sql="update courses set name='$name',feature_image='$feature_image',des='$des',price='$price',duration='$duration' where id=$id";
             if($conn->query($sql))
             {
-                    $resUsers = "true";
+                    $resCourses = "true";
             }
             else
             {
-                $errorUsers=$conn->error;
+                $errorCourses=$conn->error;
             }
         }
     }
         
-    $sql="select * from users where type='0'";
+    $sql="select * from courses ";
     $result =  $conn->query($sql);
     if($result->num_rows)
     {
         while($row = $result->fetch_assoc())
         {
-            $usersList[] = $row;
+            $coursesList[] = $row;
         }
     }
  
@@ -84,7 +84,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Student Transaction
+            Courses
         </h1>
         <ol class="breadcrumb">
             <li>
@@ -100,16 +100,16 @@
       <br>
     <section class="content">
         <?php
-            if(isset($resUsers))
+            if(isset($resCourses))
             {
         ?>
                 <div class="alert alert-success"><strong>Success! </strong> your request successfully updated. </div> 
         <?php
             }
-            else if(isset($errorUsers))
+            else if(isset($errorCourses))
             {
         ?>
-                <div class="alert alert-danger"><strong>Error! </strong><?=$errorUsers?></div> 
+                <div class="alert alert-danger"><strong>Error! </strong><?=$errorCourses?></div> 
         <?php
                 
             }
@@ -122,10 +122,10 @@
                         <tr>
                              <th>Serial No</th>
                              <th>Name</th>
-                             <th>Mobile</th>
-                             <th>Email</th>
-                             <th>College</th>
-                             <th>Year</th>
+                             <th>Feature image</th>
+                             <th>Description</th>
+                             <th>Price</th>
+                             <th>Duration</th>
                              <th>Action</th>
                         </tr>
                     </thead>
@@ -134,10 +134,10 @@
                     
                      <?php
                         
-                            if (isset($usersList)) 
+                            if (isset($coursesList)) 
                             {
                                 $i = 1;
-                                foreach ($usersList as $detail) 
+                                foreach ($coursesList as $detail) 
                                 {    
                                 
                      ?>
@@ -145,10 +145,10 @@
                                      <tr> 
                                         <td style="text-align:center;" id="serial<?=$i?>"><?=$i;?></td>
                                         <td id="name<?=$i?>"><?=$detail['name'];?></td> 
-                                         <td id="mob<?=$i?>"><?=$detail['contact'];?></td>  
-                                         <td id="email<?=$i?>"><?=$detail['email'];?></td>
-                                         <td id="college<?=$i?>"><?=$detail['college'];?></td>
-                                         <td id="year<?=$i?>"><?=$detail['year'];?></td>
+                                         <td id="feature_image<?=$i?>"><?=$detail['feature_image'];?></td>  
+                                         <td id="des<?=$i?>"><?=$detail['des'];?></td>
+                                         <td id="price<?=$i?>"><?=$detail['price'];?></td>
+                                         <td id="duration<?=$i?>"><?=$detail['duration'];?></td>
                                         <td>
                                            
                                              <form method="post">
@@ -202,30 +202,30 @@
                    </div>
                    <div class="col-md-6"> 
                        <div class="form-group">
-                            <label>Mobile </label><br>
-                            <input type="text"  id="mob" name="mob" class="form-control">
+                            <label>Feature Image </label><br>
+                            <input type="feature_image"  id="mob" name="feature_image" class="form-control">
                         </div> 
                    </div>
                 </div>
                <div class="row">
                     <div class="col-md-6"> 
                        <div class="form-group">
-                            <label>Email</label><br>
-                            <input type="text"  id="email" name="email" class="form-control">
+                            <label>Description</label><br>
+                            <input type="text"  id="des" name="des" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6"> 
                        <div class="form-group">
-                            <label>Collage</label><br>
-                            <input type="text"  id="college" name="college" class="form-control">
+                            <label>Price</label><br>
+                            <input type="text"  id="price" name="price" class="form-control">
                         </div>
                     </div>
                 </div>
                <div class="row">
                   <div class="col-md-6"> 
                        <div class="form-group">
-                            <label>Year </label><br>
-                            <input type="text"  id="year" name="year" class="form-control">
+                            <label>Duration </label><br>
+                            <input type="text"  id="duration" name="duration" class="form-control">
                         </div> 
                    </div>
                  </div>
@@ -261,36 +261,35 @@
                    </div>
                    <div class="col-md-6"> 
                        <div class="form-group">
-                            <label>Mobile </label><br>
-                            <input type="text"  id="emob" name="emob" class="form-control">
+                            <label>Feature Image </label><br>
+                            <input type="text"  id="efeature_image" name="efeature_image" class="form-control">
                         </div> 
                    </div>
                 </div>
                <div class="row">
                     <div class="col-md-6"> 
                        <div class="form-group">
-                            <label>Email</label><br>
-                            <input type="text"  id="eemail" name="eemail" class="form-control">
+                            <label>Description</label><br>
+                            <input type="text"  id="edes" name="edes" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6"> 
                        <div class="form-group">
-                            <label>Collage</label><br>
-                            <input type="text"  id="ecollege" name="ecollege" class="form-control">
+                            <label>Price</label><br>
+                            <input type="text"  id="eprice" name="eprice" class="form-control">
                         </div>
                     </div>
                 </div>
                <div class="row">
                   <div class="col-md-6"> 
                        <div class="form-group">
-                            <label>Year </label><br>
-                            <input type="text"  id="eyear" name="eyear" class="form-control">
+                            <label>Duration </label><br>
+                            <input type="text"  id="eduration" name="eduration" class="form-control">
                             <input type="hidden"  id="eid" name="eid" class="form-control">
                         </div> 
                    </div>
                  </div>
           </div>
-
           <div class="modal-footer">
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
             <button type="submit" name="edit" class="btn btn-primary" value="">Edit</button>
@@ -318,9 +317,9 @@
     {
         $("#eid").val(id);
         $("#ename").val($("#name"+count).html());
-        $("#ecollege").val($("#college"+count).html());
-        $("#emob").val($("#mob"+count).html());
-        $("#eemail").val($("#email"+count).html());
-        $("#eyear").val($("#year"+count).html());
+        $("#efeature_image").val($("#feature_image"+count).html());
+        $("#edes").val($("#des"+count).html());
+        $("#eprice").val($("#price"+count).html());
+        $("#eduration").val($("#duration"+count).html());
     }  
 </script>

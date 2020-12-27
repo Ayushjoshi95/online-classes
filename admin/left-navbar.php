@@ -67,7 +67,17 @@
           
           <li>
            <a href="members">
-                <i class="fa fa-user"></i>Members
+                <i class="fa fa-user"></i>Users
+            </a>
+         </li>
+         <li>
+           <a href="transactions">
+                <i class="fa fa-inr"></i>Transactions
+            </a>
+         </li>
+         <li>
+           <a href="courses">
+                <i class="fa fa-book"></i>Courses
             </a>
          </li>
           
