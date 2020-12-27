@@ -31,7 +31,7 @@
            $sql="insert into gym_members(status,name,mobile,serial_no,fathers_name,address,pkg_month,fee) values('$status','$name','$course','$serial','$fname','$addr','$pmont','$feeamt')";
            if($conn->query($sql))
            {
-                   $resTransaction = "true";
+                $resTransaction = "true";
            }
            else
            {
@@ -124,6 +124,7 @@
                              <th>Order ID</th>
                              <th>Status</th>
                              <th>Time Stamp</th>
+                             <th>Action</th>
                         </tr>
                     </thead>
                      <tbody> 
@@ -140,12 +141,35 @@
                      ?>
                                      <tr> 
                                         <td style="  text-align: center; " id="serial<?=$i?>"><?=$i;?></td>
-                                        <td id="name<?=$i?>"><?=$detail['user_name'];?></td> 
-                                         <td id="course<?=$i?>"><?=$detail['course_name'];?></td>  
+                                        <td id="name<?=$i?>"><?=ucfirst($detail['user_name']);?></td> 
+                                         <td id="course<?=$i?>"><?=ucfirst($detail['course_name']);?></td>  
                                          <td id="amount<?=$i?>"><?=$detail['amt'];?></td>  
                                          <td id="orderId<?=$i?>"><?=$detail['order_id'];?></td>  
                                          <td id="status<?=$i?>"><?=$detail['status'];?></td>
-                                         <td id="status<?=$i?>"><?=$detail['time_stamp'];?></td>
+                                         <td id="status<?=$i?>">
+                                            <?php
+                                                $date=date_create($detail['time_stamp']);
+                                                echo date_format($date,"M d Y");
+                                            ?>
+                                        </td>
+                                         <td>
+                                                <?php
+                                                        if(!empty($detail['invoice']))
+                                                        {
+                                                ?>
+                                                            <a href="invoices/<?=$detail['invoice']?>" class="btn btn-primary" target="_blank"><i class="fa fa-eye"></i></a>
+                                                            <a href="invoices/<?=$detail['invoice']?>" class="btn btn-success" download><i class="fa fa-download"></i></a>
+                                                <?php
+                                                        }
+                                                        else
+                                                        {
+                                                        ?>
+                                                            <a href='#!' class='btn btn-warning' ><i class='fa fa-warning'></i></a>
+                                                        <?php
+                                                        }
+                                                ?>
+                                                
+                                         </td>
                                 </tr>
                                  
                             <?php
