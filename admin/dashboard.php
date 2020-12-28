@@ -153,216 +153,216 @@ require_once 'left-navbar.php';
     </section>
 
     <!-- overview section -->
+
     <section class="content">
         <!-- Info boxes -->
         <!-- user overiew section starts -->
-        <div class="row">
-            <section class="content-header" style="margin-bottom: 10px;">
-                <h1>
-                    Users Overview
-                </h1>
-            </section>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-aqua"><i class="fa fa-users"></i></span>
+        <!-- Small boxes (Stat box) -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-primary">
+                        <div class="inner">
+                            <h3><?=$total_users?></h3>
 
-                    <div class="info-box-content">
-
-                        <span class="info-box-text">Total Users</span>
-                        <span class="info-box-number"><?=$total_users?></span>
+                            <p>User Registrations</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
-                    <!-- /.info-box-content -->
                 </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-green"><i class="fa fa-users"></i></span>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3><?=$enrolled_users?></h3>
 
-                    <div class="info-box-content">
-                        <span class="info-box-text">Enrolled Users</span>
-                        <span class="info-box-number"><?=$enrolled_users;?></span>
+                            <p>Enrolled Users</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
-                    <!-- /.info-box-content -->
                 </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-            <!-- fix for small devices only -->
-            <div class="clearfix visible-sm-block"></div>
+                <!-- ./col -->
+                <div class="col-lg-3   col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h3><?=$nonEnrolled_users?></h3>
 
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-yellow"><i class="fa fa-users"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text" style="font-size:13px">Non Enrolled Users</span>
-                        <span class="info-box-number"><?=$nonEnrolled_users?></span>
+                            <p>User Registrations</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
-                    <!-- /.info-box-content -->
                 </div>
-                <!-- /.info-box -->
+                <!-- ./col -->
+
+                <!-- ./col -->
             </div>
-            <!-- /.col -->
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h3><?=$total_trans?></h3>
+
+                            <p>Transactions</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-exchange"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3><?=$sucess_trans?></h3>
+
+                            <p>Completed Transactions</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3   col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-red">
+                        <div class="inner">
+                            <h3><?=$failed_trans?></h3>
+
+                            <p>Failed Transaction</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-exclamation"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+
+                <!-- ./col -->
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h3><?=$total_trans_amt?></h3>
+
+                            <p>Amount</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3><?=$success_trans_amt?></h3>
+
+                            <p>Success Amount</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3   col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-red">
+                        <div class="inner">
+                            <h3><?=$failed_trans_amt?></h3>
+
+                            <p>Failed Amount</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+
+                <!-- ./col -->
+            </div>
+            <div class="row"> 
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-primary">
+                        <div class="inner">
+                            <h3><?=$total_course?></h3>
+
+                            <p>Total Courses</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-book"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3><?=$enrolled_courses?></h3>
+
+                            <p>Enrolled Courses</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-bookmark"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3   col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h3><?=$nonEnrolled_courses?></h3>
+
+                            <p>Non Enrolled Courses</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-bookmark-o"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+
+                <!-- ./col -->
+            </div>
         </div>
-        <!-- user overiew section ends -->
-        <!-- transaction overiew section starts -->
-        <div class="row">
-            <section class="content-header" style="margin-bottom: 10px;">
-                <h1>
-                    Transaction Overview
-                </h1>
-            </section>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-teal"><i class="fa fa-exchange"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text">Total Transactions </span>
-                        <span class="info-box-number"><?=$total_trans?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-green"><i class="fa fa-check"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text" style="font-size:13px">Completed Transactions</span>
-                        <span class="info-box-number"><?=$sucess_trans?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-
-
-            <!-- fix for small devices only -->
-            <div class="clearfix visible-sm-block"></div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-red"><i class="fa fa-exclamation"></i></span>
-
-                    <div class="info-box-content">
-
-                        <span class="info-box-text">Failed Transactions</span>
-                        <span class="info-box-number"><?=$failed_trans?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-teal"><i class="fa fa-money"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text">Total Amount </span>
-                        <span class="info-box-number"><?=$total_trans_amt?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-green"><i class="fa fa-money"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text" style="font-size:13px">Success Amount</span>
-                        <span class="info-box-number"><?=$success_trans_amt?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-
-
-            <!-- fix for small devices only -->
-            <div class="clearfix visible-sm-block"></div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-red"><i class="fa fa-money"></i></span>
-
-                    <div class="info-box-content">
-
-                        <span class="info-box-text">Failed Amount</span>
-                        <span class="info-box-number"><?=$failed_trans_amt?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-        </div>
-        <!-- transaction overiew section ends -->
-        <!-- course overiew section starts -->
-        <div class="row">
-            <section class="content-header" style="margin-bottom: 10px;">
-                <h1>
-                    Courses Overview
-                </h1>
-            </section>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-aqua"><i class="fa fa-book"></i></span>
-
-                    <div class="info-box-content">
-
-                        <span class="info-box-text">Total Courses</span>
-                        <span class="info-box-number"><?=$total_course?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-green"><i class="fa fa-bookmark"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text">Enrolled Courses</span>
-                        <span class="info-box-number"><?=$enrolled_courses;?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-            <!-- fix for small devices only -->
-            <div class="clearfix visible-sm-block"></div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-yellow"><i class="fa fa-bookmark-o"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text" style="font-size:13px">Non Enrolled Courses</span>
-                        <span class="info-box-number"><?=$nonEnrolled_courses?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <!-- /.col -->
-        </div>
+        <!-- /.row -->
+        
     </section>
-<!-- Recent section -->
+    <!-- Recent section -->
     <section class="content">
         <div class="container-fluid">
+
             <div class="row">
                 <div class="col-12">
                     <div class="box">
@@ -414,24 +414,24 @@ require_once 'left-navbar.php';
                                                         break;
                                                 }
                                         ?>
-                                                <tr>
-                                                    <td><?=$details['order_id']?></td>
-                                                    <td><?=$details['user_name']?></td>
-                                                    <td><?=$details['course_name']?></td>
-                                                    <td>
-                                                        <?php
+                                    <tr>
+                                        <td><?=$details['order_id']?></td>
+                                        <td><?=$details['user_name']?></td>
+                                        <td><?=$details['course_name']?></td>
+                                        <td>
+                                            <?php
                                                             $date=date_create($detail['time_stamp']);
                                                             echo date_format($date,"M d Y");
                                                         ?>
-                                                    </td>
-                                                    <td><span class="<?=$class?>"><?=$details['status']?></span></td>
-                                                    <td><?=$details['amt']?></td>
-                                                </tr>
-                                        <?php
+                                        </td>
+                                        <td><span class="<?=$class?>"><?=$details['status']?></span></td>
+                                        <td><?=$details['amt']?></td>
+                                    </tr>
+                                    <?php
                                             }
                                         }
                                     ?>
-                                    
+
                                 </tbody>
                             </table>
                         </div>
