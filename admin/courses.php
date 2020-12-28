@@ -52,16 +52,40 @@
             $price=test_input($_POST['eprice']);
             $duration=test_input($_POST['eduration']);
             $id=test_input($_POST['eid']);
-            
-            $sql="update courses set name='$name',feature_image='$feature_image',des='$des',price='$price',duration='$duration' where id=$id";
-            if($conn->query($sql))
+            if(isset($_FILES['images']))
             {
-                    $resCourses = "true";
+                $file = $_FILES['images']; 
+                $uploaded_file_name = upload_image($files);
+                if($uploaded_file_name!='err')
+                {
+                    $sql="update courses set name='$name',feature_image='$uploaded_file_name',des='$des',price='$price',duration='$duration' where id=$id";
+                    if($conn->query($sql))
+                    {
+                            $resCourses = "true";
+                    }
+                    else
+                    {
+                        $errorCourses=$conn->error;
+                    }
+                }
+                else
+                {
+                    $errorCourses="Unable To upload Image";
+                }
             }
             else
             {
-                $errorCourses=$conn->error;
+                $sql="update courses set name='$name' ,des='$des',price='$price',duration='$duration' where id=$id";
+                if($conn->query($sql))
+                {
+                        $resCourses = "true";
+                }
+                else
+                {
+                    $errorCourses=$conn->error;
+                }
             }
+          
         }
     }
         
@@ -254,7 +278,7 @@
             </button>
             <h4 class="modal-title">Edit Member</h4>
            </div>
-           <form method="post">
+           <form method="post"  enctype="multipart/form-data">
            <div class="modal-body">
                <div class="row">
                   <div class="col-md-6"> 
@@ -266,7 +290,7 @@
                    <div class="col-md-6"> 
                        <div class="form-group">
                             <label>Feature Image </label><br>
-                            <input type="text"  id="efeature_image" name="efeature_image" class="form-control">
+                            <input type="file"  id="efeature_image" name="images" class="form-control">
                         </div> 
                    </div>
                 </div>
@@ -321,7 +345,7 @@
     {
         $("#eid").val(id);
         $("#ename").val($("#name"+count).html());
-        $("#efeature_image").val($("#feature_image"+count).html());
+        // $("#efeature_image").val($("#feature_image"+count).html());
         $("#edes").val($("#des"+count).html());
         $("#eprice").val($("#price"+count).html());
         $("#eduration").val($("#duration"+count).html());

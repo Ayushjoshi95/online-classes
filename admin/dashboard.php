@@ -406,7 +406,7 @@ require_once 'left-navbar.php';
                         <h5 class="widget-user-desc">Rs <?=$detail['price']?> /-</h5>
                     </div>
                     <div class="widget-user-image">
-                        <img class="img-circle elevation-2" src="<?=$detail['feature_image']?>" alt="Course Image">
+                        <img class="img-circle elevation-2" src="uploads/<?=$detail['feature_image']?>" alt="Course Image">
                     </div>
                     <div class="card-footer">
                         <div class="row">
