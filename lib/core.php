@@ -332,6 +332,7 @@ function upload_image($files)
      $uploadedFile = 'err';
     if(!empty($_FILES['images']["type"]))
     {
+
         $fileName = time().'_'.$_FILES['images']['name'];
         $valid_extensions = array("jpeg", "jpg", "png","pdf","bmp","JPG");
         $temporary = explode(".", $_FILES['images']["name"]);

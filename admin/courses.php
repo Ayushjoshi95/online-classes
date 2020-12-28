@@ -3,6 +3,7 @@
     require_once 'navbar.php';
     require_once 'left-navbar.php';
  
+
     $id=$_SESSION['id'];
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -24,21 +25,23 @@
         if(isset($_POST['add']))
         {
             $name=test_input($_POST['name']);
-            $feature_image=test_input($_POST['feature_image']);
             $des=test_input($_POST['des']);
             $price=test_input($_POST['price']);
             $duration=test_input($_POST['duration']);
-            
-            $sql="insert into courses(name,feature_image,des,price,duration) values('$name','$feature_image','$des','$price','$duration')";
-
-            if($conn->query($sql))
+            $file = $_FILES['images']; 
+            $uploaded_file_name = upload_image($files);
+            if($uploaded_file_name!="err")
             {
-                    $resCourses = "true";
-            }
+                $sql="insert into courses(name,des,price,duration,feature_image) values('$name','$des','$price','$duration','$uploaded_file_name')";
+                if($conn->query($sql))
+                {
+                   $resCourses=true;
+                }
+            } 
             else
             {
-                $errorCourses=$conn->error;
-            }
+                $errorCourses="Unable To upload Image";
+            }  
         }
         
         if(isset($_POST['edit']))
@@ -145,7 +148,7 @@
                                      <tr> 
                                         <td style="text-align:center;" id="serial<?=$i?>"><?=$i;?></td>
                                         <td id="name<?=$i?>"><?=$detail['name'];?></td> 
-                                         <td id="feature_image<?=$i?>"><?=$detail['feature_image'];?></td>  
+                                         <td id="feature_image<?=$i?>"><img src="uploads/<?=$detail['feature_image'];?>"/></td>  
                                          <td id="des<?=$i?>"><?=$detail['des'];?></td>
                                          <td id="price<?=$i?>"><?=$detail['price'];?></td>
                                          <td id="duration<?=$i?>"><?=$detail['duration'];?></td>
@@ -191,7 +194,7 @@
             </button>
             <h4 class="modal-title">Add Member</h4>
            </div>
-           <form method="post">
+           <form method="post"  enctype="multipart/form-data">
            <div class="modal-body">
                <div class="row">
                   <div class="col-md-6"> 
@@ -201,10 +204,11 @@
                         </div> 
                    </div>
                    <div class="col-md-6"> 
-                       <div class="form-group">
-                            <label>Feature Image </label><br>
-                            <input type="feature_image"  id="mob" name="feature_image" class="form-control">
-                        </div> 
+                            <div class="form-group">
+                                <label>Feature Image </label><br>
+                                <input type="file"  id="mob" name="images" class="form-control">
+                            </div> 
+                    
                    </div>
                 </div>
                <div class="row">
