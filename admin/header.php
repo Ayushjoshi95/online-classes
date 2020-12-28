@@ -82,6 +82,14 @@ $type=$data[0]['type'];
 }
 ._1qUuq{margin-left:.5rem;font-size:15px;font-size:.9375rem;font-weight:500;font-stretch:normal;font-style:normal;letter-spacing:.14px;letter-spacing:.00875rem;text-align:left;color:#4a4a4a}
 ._3qzZ9{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-align:start;align-items:flex-start}
+.elevation-2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)!important;
+}
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border-top: 0 solid rgba(0,0,0,.125);
+}
 </style>
 </head>
     <body class="hold-transition fixed skin-red sidebar-mini">

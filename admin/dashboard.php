@@ -136,6 +136,33 @@ require_once 'left-navbar.php';
             }
              
         }
+    }
+    
+    //fetching recent courses (3)
+    $sql="SELECT * from  courses c order by c.time_stamp desc limit 3";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) 
+    {
+        if($result->num_rows>0)
+        {
+            while($row=$result->fetch_assoc())
+            {
+                    $courses[$row['id']] = $row;
+                    $sql = "SELECT count(id) as count from enrolled where course_id=".$row["id"];
+                    if($res = $conn->query($sql))
+                    {
+                        if($res->num_rows)
+                        {
+                            $raw = $res->fetch_assoc();
+                            $courses[$row['id']]['enrolled'] = $raw['count'];
+                            $courses[$row['id']]['amount']=$raw['count']*$row['price'];
+                        } 
+                    }
+                    
+                    
+            } 
+             
+        }
     }   
 
 ?>
@@ -306,7 +333,7 @@ require_once 'left-navbar.php';
 
                 <!-- ./col -->
             </div>
-            <div class="row"> 
+            <div class="row">
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-primary">
@@ -357,67 +384,80 @@ require_once 'left-navbar.php';
             </div>
         </div>
         <!-- /.row -->
-        
+
     </section>
     <!-- Recent section -->
     <section class="content">
+    <h3 class="mt-4 mb-4">Courses Overview</h3>
         <div class="row">
-        <!-- /.col -->
-        <div class="col-md-4">
-            <!-- Widget: user widget style 1 -->
-            <div class="card card-widget widget-user">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header bg-info">
-                <h3 class="widget-user-username">Alexander Pierce</h3>
-                <h5 class="widget-user-desc">Founder & CEO</h5>
-              </div>
-              <div class="widget-user-image">
-                <img class="img-circle elevation-2" src="../dist/img/user1-128x128.jpg" alt="User Avatar">
-              </div>
-              <div class="card-footer">
-                <div class="row">
-                  <div class="col-sm-4 border-right">
-                    <div class="description-block">
-                      <h5 class="description-header">3,200</h5>
-                      <span class="description-text">SALES</span>
+            <!-- /.col -->
+            <?php
+                if(isset($courses))
+                {
+                    foreach($courses as $detail)
+                    {
+                ?>
+                            <div class="col-md-4">
+                <!-- Widget: user widget style 1 -->
+                <div class="card card-widget widget-user">
+                    <!-- Add the bg color to the header using any of the bg-* classes -->
+                    <div class="widget-user-header bg-aqua">
+                        <h3 class="widget-user-username"><?=ucfirst($detail['name'])?></h3>
+                        <h5 class="widget-user-desc">Rs <?=$detail['price']?> /-</h5>
                     </div>
-                    <!-- /.description-block -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-sm-4 border-right">
-                    <div class="description-block">
-                      <h5 class="description-header">13,000</h5>
-                      <span class="description-text">FOLLOWERS</span>
+                    <div class="widget-user-image">
+                        <img class="img-circle elevation-2" src="<?=$detail['feature_image']?>" alt="Course Image">
                     </div>
-                    <!-- /.description-block -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-sm-4">
-                    <div class="description-block">
-                      <h5 class="description-header">35</h5>
-                      <span class="description-text">PRODUCTS</span>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-sm-4 border-right">
+                                <div class="description-block">
+                                    <h5 class="description-header"><?=$detail['amount']?></h5>
+                                    <span class="description-text">Total </span>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-sm-4 border-right">
+                                <div class="description-block">
+                                    <h5 class="description-header"><?=$detail['enrolled']?></h5>
+                                    <span class="description-text">Enrolled</span>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-sm-4">
+                                <div class="description-block">
+                                    <h5 class="description-header"><?=$detail['duration']?></h5>
+                                    <span class="description-text">Months</span>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
                     </div>
-                    <!-- /.description-block -->
-                  </div>
-                  <!-- /.col -->
                 </div>
-                <!-- /.row -->
-              </div>
+                <!-- /.widget-user -->
             </div>
-            <!-- /.widget-user -->
-          </div>
+                
+                <?php
+                    }
+                }
+            
+            ?>
+          
         </div>
-          <!-- /.col -->
+        <!-- /.col -->
     </section>
     <section class="content">
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-7">
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">Recent Transactions</h3>
-
+                            <h3 class="box-title">Recent Transactions</h3> 
                             <div class="box-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
                                     <input type="text" name="table_search" class="form-control float-right"
@@ -435,7 +475,7 @@ require_once 'left-navbar.php';
                             <table class="table table-head-fixed text-nowrap">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Order ID</th>
                                         <th>User</th>
                                         <th>Course</th>
                                         <th>Date</th>
