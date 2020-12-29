@@ -54,7 +54,7 @@ require_once 'header.php';
         <div class="col-lg-6">
             <div class="card mb-5 mb-lg-0" id="price">
                 <div class="card-body">
-                    <h5 class="card-title text-uppercase text-center" style="color:white;">Benefits</h5>
+                    <h5 class="card-title   text-uppercase text-center" style="color:white;">Benefits</h5>
                     <hr>
                     <ul class="fa-ul" style="margin-top: 40px;">
                         <li style="font-size: 21px;margin-top:8px;"><span class="fa-li"></span>HANDS ON EXPERIENCE</li>
@@ -75,7 +75,8 @@ require_once 'header.php';
         <div id="registration_form">
 
             <form style="padding-top:70px;" id="registrationForm">
-                <div class="form-group" style="padding-left:3vw;">
+            <h2 class="text-uppercase text-center">Rs  3999</h2>
+                <div class="form-group" style="padding-left:3vw;margin-top:50px;">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name"
                         style="width:90%;border-radius:20px;" required>
                 </div>
