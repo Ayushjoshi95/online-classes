@@ -296,7 +296,8 @@ launch of the space telescope known as the Hubble.
                     <h4>Industrial Experinece</h4>
                     <div>
                         <p>
-                            CyberFlow has the teachings and guiding staff with years of industial
+                            CyberFlow has the teachings and guiding staff with years of industial experience in
+                            different companies .
                         </p>
                     </div>
                 </div>
@@ -307,10 +308,8 @@ launch of the space telescope known as the Hubble.
                     <h4>Source File Included</h4>
                     <div>
                         <p>
-                            Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                            do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                            amet consec tetur adipisicing elit, sed do eiusmod tempor
-                            incididunt labore.
+                            We will provide you all the source codes of the topics that will be covered in the live sessions 
+                            to refresh your memory.
                         </p>
                     </div>
                 </div>
@@ -321,10 +320,8 @@ launch of the space telescope known as the Hubble.
                     <h4>Internships</h4>
                     <div>
                         <p>
-                            Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                            do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                            amet consec tetur adipisicing elit, sed do eiusmod tempor
-                            incididunt labore.
+                            We will refer you to the multiple compamies and firms for internships according to your performances in the
+                            course.
                         </p>
                     </div>
                 </div>
@@ -349,10 +346,7 @@ incididunt labore.
                     <h4>Expert Mentors</h4>
                     <div>
                         <p>
-                            Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                            do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                            amet consec tetur adipisicing elit, sed do eiusmod tempor
-                            incididunt labore.
+                            We will the available to you for all the doubts and guide you to do the best in your life with our experts mentorship.
                         </p>
                     </div>
                 </div>
@@ -363,10 +357,7 @@ incididunt labore.
                     <h4>Live Supports</h4>
                     <div>
                         <p>
-                            Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                            do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                            amet consec tetur adipisicing elit, sed do eiusmod tempor
-                            incididunt labore.
+                            All your quries will be solved in the live sessions only through multipe modes .
                         </p>
                     </div>
                 </div>
@@ -376,7 +367,7 @@ incididunt labore.
 </section>
 
 
-<section class="testimonials-area section-gap">
+<!-- <section class="testimonials-area section-gap">
     <div class="container">
         <div class="testi-slider owl-carousel" data-slider-id="1">
             <div class="row align-items-center">
@@ -425,32 +416,31 @@ incididunt labore.
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 <section class="registration-area">
     <div class="container">
         <div class="row align-items-end">
             <div class="col-lg-5">
-                <div class="section-title text-left text-white">
+                <div class="section-title text-left text-white" style="padding-top:30px;">
                     <h2 class="text-white">
                         Watch Our Trainers <br>
                         in Live Action
                     </h2>
                     <p>
-                        If you are looking at blank cassettes on the web, you may be
-                        very confused at the difference in price. You may see some for
-                        as low as $.17 each.
+                        Get familiar with the great teachings style of our experienced trainers and start learning all start making progress
+                        towards the dreams of your life.
                     </p>
                 </div>
             </div>
-            <div class="offset-lg-3 col-lg-4 col-md-6">
-                <div class="course-form-section">
-                    <h3 class="text-white">Register for Workshop</h3>
-                    <form class="course-form-area contact-page-form course-form text-right" id="myForm"
+            <div style="" class="offset-lg-3 col-lg-4 col-md-4">
+                <div class="course-form-section" style="padding-top:140px;">
+                    <h2 class="text-white">Let's start learning </h2>
+                    <!-- <form class="course-form-area contact-page-form course-form text-right" id="myForm"
                         action="https://preview.colorlib.com/theme/eclipse/mail.html" method="post"
-                        style="margin-top: 25px;">
-                        <div class="form-group col-md-12">
+                        style="margin-top: 25px;">  -->
+                        <!-- <div class="form-group col-md-12">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Name"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
                         </div>
@@ -462,11 +452,11 @@ incididunt labore.
                         <div class="form-group col-md-12">
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+                        </div> -->
+                        <div style="margin-top:80px">
+                            <a href="registration" class="btn" style="padding-left:40px;font-size:120%;width:95%">Click here to register </a>
                         </div>
-                        <div class="col-lg-12 text-center">
-                            <button class="btn text-uppercase">Submit</button>
-                        </div>
-                    </form>
+                    <!-- </form> -->
                 </div>
             </div>
         </div>
