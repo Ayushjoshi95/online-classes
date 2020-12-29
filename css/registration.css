@@ -1,19 +1,16 @@
-body{
-
-    background: url(../img/registration.png) no-repeat;
-}
 
 #registration_form{
 
     background-color:white;
-    height:450px;
-    width:45%;
-    margin-left:28%;
-    margin-top:110px;
-    border-radius:20px;
-    box-shadow: 10px 23px 17px -9px rgba(170,163,163,0.75);
-    -webkit-box-shadow: 10px 23px 17px -9px rgba(170,163,163,0.75);
-    -moz-box-shadow: 10px 23px 17px -9px rgba(170,163,163,0.75);
+  height:450px;
+  width:45%;
+  margin-left:28%;
+  margin-top:110px;
+  border-radius:20px;
+  box-shadow: 1px 6px 30px 2px rgba(112,107,107,0.75);
+  -webkit-box-shadow: 1px 6px 30px 2px rgba(112,107,107,0.75);
+  -moz-box-shadow: 1px 6px 30px 2px rgba(112,107,107,0.75);
+  margin-bottom: 30px;
 }
 
 
@@ -23,3 +20,27 @@ body{
         margin-left: 5%;
     }
   }
+
+  #main_price {
+
+    margin-top: 100px;
+    margin-left: 9%;
+}
+
+#price {
+    width: 80%;
+    height: 480px;
+    border-radius: 25px;
+    background: rgb(124,50,255);
+background: linear-gradient(90deg, rgba(124,50,255,1) 19%, rgba(182,55,225,1) 100%);
+color:white;
+}
+
+#heading {
+
+    background: rgb(244, 89, 28);
+    background: linear-gradient(90deg, rgba(244, 89, 28, 1) 19%, rgba(227, 162, 32, 1) 100%);
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}

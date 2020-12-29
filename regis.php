@@ -1,33 +1,7 @@
 <?php
 require_once 'header.php';
 ?>
-<style>
-#main_price {
 
-    margin-top: 100px;
-    margin-left: 9%;
-}
-
-#price {
-    width: 80%;
-    height: 480px;
-    border-radius: 25px;
-    background: rgb(244, 216, 28);
-    background: linear-gradient(90deg, rgba(244, 216, 28, 1) 19%, rgba(242, 178, 82, 1) 100%);
-    box-shadow: 1px 6px 30px 2px rgba(112, 107, 107, 0.75);
-    -webkit-box-shadow: 1px 6px 30px 2px rgba(112, 107, 107, 0.75);
-    -moz-box-shadow: 1px 6px 30px 2px rgba(112, 107, 107, 0.75);
-}
-
-#heading {
-
-    background: rgb(244, 89, 28);
-    background: linear-gradient(90deg, rgba(244, 89, 28, 1) 19%, rgba(227, 162, 32, 1) 100%);
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 30px;
-}
-</style>
 <link rel="stylesheet" href="css/registration.css">
 <section class="home-banner-area">
     <div class="container">
@@ -59,7 +33,7 @@ require_once 'header.php';
         <div class="col-lg-6">
             <div class="card mb-5 mb-lg-0" id="price">
                 <div class="card-body">
-                    <h5 class="card-title text-muted text-uppercase text-center">Technology</h5>
+                    <h5 class="card-title  text-uppercase text-center" style="color:white;">Technology</h5>
                     <hr>
                     <ul class="fa-ul" style="margin-top: 40px;">
                         <li style="font-size: 21px;"><span class="fa-li"></span>HTML</li>
@@ -68,7 +42,7 @@ require_once 'header.php';
                         <li style="font-size: 21px;margin-top:8px;"><span class="fa-li"></span>SQL</li>
                         <li style="font-size: 21px;margin-top:8px;"><span class="fa-li"></span>PHP</li>
                         <li style="font-size: 21px;margin-top:8px;"><span class="fa-li"></span>AJAX and JSON</li>
-                        <li style="font-size: 21px;margin-top:8px;"><span class="fa-li">HT.ACCESS</span></li>
+                        <li style="font-size: 21px;margin-top:8px;"><span class="fa-li"></span>HT.ACCESS</li>
                         <li style="font-size: 21px;margin-top:8px;"><span class="fa-li"></span>GIT</li>
                     </ul>
                 </div>
@@ -80,7 +54,7 @@ require_once 'header.php';
         <div class="col-lg-6">
             <div class="card mb-5 mb-lg-0" id="price">
                 <div class="card-body">
-                    <h5 class="card-title text-muted text-uppercase text-center">Benefits</h5>
+                    <h5 class="card-title text-uppercase text-center" style="color:white;">Benefits</h5>
                     <hr>
                     <ul class="fa-ul" style="margin-top: 40px;">
                         <li style="font-size: 21px;margin-top:8px;"><span class="fa-li"></span>HANDS ON EXPERIENCE</li>
