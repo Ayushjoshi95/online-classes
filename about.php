@@ -2,16 +2,16 @@
 require_once 'header.php';
 ?>
 
-<section class="feature-area" style="margin-top: 30px;">
+<section class="feature-area" style="margin-top:30px;">
     <div class="container-fluid">
         <div class="feature-inner row">
             <div class="col-lg-2 col-md-6">
                 <div class="feature-item d-flex">
                     <i class="ti-book"></i>
                     <div class="ml-20">
-                        <h4>New Classes</h4>
+                        <h4>Experienced Teachers</h4>
                         <p>
-                            In the history of modern astronomy, there is probably no one greater leap forward.
+                            We provide you the professional experts to share their knowledge and guide you. 
                         </p>
                     </div>
                 </div>
@@ -20,9 +20,9 @@ require_once 'header.php';
                 <div class="feature-item d-flex">
                     <i class="ti-cup"></i>
                     <div class="ml-20">
-                        <h4>Top Courses</h4>
+                        <h4>Demanding Courses</h4>
                         <p>
-                            In the history of modern astronomy, there is probably no one greater leap forward.
+                            We provide you the most demanded courses in the market starting from scratch.
                         </p>
                     </div>
                 </div>
@@ -31,9 +31,9 @@ require_once 'header.php';
                 <div class="feature-item d-flex border-right-0">
                     <i class="ti-desktop"></i>
                     <div class="ml-20">
-                        <h4>Full E-Books</h4>
+                        <h4>Industrial Projects</h4>
                         <p>
-                            In the history of modern astronomy, there is probably no one greater leap forward.
+                            We makes you work on industrial project to make you familiar with industrial coding.
                         </p>
                     </div>
                 </div>
@@ -41,6 +41,7 @@ require_once 'header.php';
         </div>
     </div>
 </section>
+
 
 <!-- <section class="video-area section-gap-bottom">
 <div class="container">
@@ -104,9 +105,9 @@ launch of the space telescope known as the Hubble.
                         Can Avail By Everyone
                     </h2>
                     <p>
-                        If you are looking at blank cassettes on the web, you may be
-                        very confused at the difference in price. You may see some for
-                        as low as $.17 each.
+                    We are invested in you, and one of our top priorities is to ensure that you have 
+                    a firm understanding of how the Web Industry works. Our Career Counsellors dedicate 
+                    their time into making sure you feel confident and ready to tackle all potential interviews!
                     </p>
                 </div>
             </div>
