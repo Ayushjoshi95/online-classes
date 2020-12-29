@@ -271,7 +271,7 @@ incididunt labore.
                 <div class="course-form-section">
                     <h3 class="text-white">Register for Workshop</h3>
                     <form class="course-form-area contact-page-form course-form text-right" id="myForm"
-                        action="https://preview.colorlib.com/theme/eclipse/mail.html" method="post"
+                         method="post"
                         style="margin-top: 25px;">
                         <div class="form-group col-md-12">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Name"
